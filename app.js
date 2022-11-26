@@ -7,7 +7,6 @@ const hbs=require("hbs");
 var formRouter=require('./routes/formRouter');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-const uploadRouter = require('./routes/uploadRouter');
 const mongoose =require('mongoose');
 const url = "mongodb://0.0.0.0:27017/conFusion";
 var FileStore=require('session-file-store');
@@ -35,7 +34,6 @@ app.set("views",template_path);
 
 app.use('/', indexRouter);
 app.use('/form',formRouter);
-app.use('/upload',uploadRouter)
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler

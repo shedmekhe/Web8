@@ -32,32 +32,38 @@ formRouter.route('/')
 .get((req,res,next)=>{
     res.render("form");
 })
-.post(upload,(req,res,next)=>{
-    console.log(req.myfile1);
-    Projects.create({
-        title:req.body.title,
-        obj:req.body.obj,
-        myfile:req.body.myfile,
-        myfile1:req.myfile1.filename,
-        yname:req.body.yname,
-        email:req.body.email,
-        socialink:req.body.socialink,
-        socialink1:req.body.socialink1,
-        gname:req.body.gname,
-        technologies:req.body.technologies,
-        apk_views:req.body.apk_views,
-        vid1:req.body.vid1,
-        repolink:req.body.repolink,
-        weblink:req.body.weblink,
-        apkf:req.body.apkf
-    })
-    .then((proj)=>{
+.post(upload,async(req,res)=>{
+    try{
+        // console.log(req.myfile1.filename);
+        await Projects.create(
+           req.body
+        )   
         console.log("Projects Created !!");
         res.statusCode=200;
         // res.setHeader('Content-Type','application/json')
         res.render("index");
-    },(err)=>next(err))
-    .catch((err)=>next(err));
+    }
+    catch (e){
+        res.status(400).send(e)
+        console.log(e);
+     }
 });
 
 module.exports=formRouter;
+// {   
+//     title:req.body.title,
+//     obj:req.body.obj,
+//     myfile:req.body.myfile,
+//     myfile1:req.myfile1.filename,
+//     yname:req.body.yname,
+//     email:req.body.email,
+//     socialink:req.body.socialink,
+//     socialink1:req.body.socialink1,
+//     gname:req.body.gname,
+//     technologies:req.body.technologies,
+//     apk_views:req.body.apk_views,
+//     vid1:req.body.vid1,
+//     repolink:req.body.repolink,
+//     weblink:req.body.weblink,
+//     apkf:req.body.apkfs,
+//     }
