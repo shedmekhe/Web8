@@ -45,7 +45,7 @@ formRouter.route('/')
         console.log("Projects Created !!");
         res.statusCode=200;
         // res.setHeader('Content-Type','application/json')
-        res.render("index");
+        res.redirect("/");
     }
     catch (e){
         res.status(400).send(e)

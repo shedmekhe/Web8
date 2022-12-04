@@ -22,6 +22,7 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script> -->
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -115,7 +116,7 @@
                         <input type="text" placeholder="Website link" name="weblink" id="weblink">
                         {{!-- <label for="myfile" style="margin-left: 50px">App apk</label> --}}
                         {{!-- <input type="file" id="myfile" class="upload-box" name="apkf"><br> --}}
-                        <button id="done" type="submit" onclick="postData()">Done</button>
+                        {{!-- <button id="done" type="submit" onclick="postData()">Done</button> --}}
                     </div>
 
                     <!-- <div class="buttons" id="buttonsCTN">
@@ -169,17 +170,20 @@
 
                 </div> -->
 
-                <!-- </div> -->
-                <!-- <div class="buttons" id="buttonsCTN">
-                    <button id="prev" type="submit">Previous</button>
-                    <button id="next" type="submit" onclick="myfunction()">Next</button>
-                </div> -->
-            </form>
-
-            <div class="buttons" id="buttonsCTN">
+              <div class="buttons" id="buttonsCTN">
                 <button id="prev" type="button">Previous</button>
                 <button id="next" type="button" onclick="myfunction()">Next</button>
+                 <button id="done" type="submit" onclick="postData()">Done</button>
+
             </div>
+            </form>
+
+            {{!-- <div class="buttons" id="buttonsCTN">
+                <button id="prev" type="button">Previous</button>
+                <button id="next" type="button" onclick="myfunction()">Next</button>
+                 <button id="done" type="submit" onclick="postData()">Done</button>
+
+            </div> --}}
 
         </div>
         

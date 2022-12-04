@@ -129,7 +129,7 @@ nav img{
   height: 60%;
   margin-left: 8%;
   margin-top: 3%;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   padding: 1%;
@@ -361,7 +361,9 @@ nav img{
 .main .container .buttons #prev{
   display: none;
 }
-
+.main .container .buttons #done{
+  display: none;
+}
 
 
 
