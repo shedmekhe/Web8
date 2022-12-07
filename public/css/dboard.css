@@ -39,7 +39,7 @@ body {
 nav {
     display: flex;
     /* position: fixed; */
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     /* left: 0; */
     top: 0;
@@ -151,9 +151,10 @@ nav img {
     'wc wc wc'
     ' img name edit'
     ' img email temp'
-    ' img about temp'
-    'project project project';
-    margin: 30px 100px 0 100px;
+    ' img  linkedin temp'
+    'img github temp';
+    /* 'project project project'; */
+    margin: 30px 100px 10px 100px;
     grid-gap: 20px 50px;
     top: 0;
     align-items: center;
@@ -174,13 +175,14 @@ nav img {
 
 #profile #wc{
     grid-area: wc;
-    margin: 10px;
+    /* margin: 10px; */
 }
 #profile #profile-img{
     height: 220px;
     grid-area: img;
+    
     border-radius: 10%;
-    margin-left: 20px;
+    margin-left: 50px;
     border: 5px solid rgb(129, 223, 211);
 }
 #profile .temp{
@@ -193,17 +195,20 @@ nav img {
     grid-area: edit;
     height: 60px;
     /* background: -webkit-linear-gradient(left , #00fbff, #c99090);    */
-    background : url('./../images/pencil.png') no-repeat;
+    /* background : url('./../images/pencil.png') no-repeat; */
+    width: 80px;
+    margin-left: 100px;
     border-radius: 10px ;
 }
 
 .btn {
     /* background-color: DodgerBlue;  */
     border: none; /* Remove borders */
-    color: white; /* White text */
+    color: black; /* White text */
     font-size: 16px; /* Set a font size */
     cursor: pointer; /* Mouse pointer on hover */
-    background-color: rgb(129, 223, 211);
+    background-color: rgb(239, 247, 246);
+    border: 5px solid rgb(129, 223, 211);
   }
 
   
@@ -214,17 +219,23 @@ nav img {
 
 #profile #name{
     grid-area: name;
+    font-size: 50px;
 }
 #profile #about{
     grid-area: about;
 }
 #profile #mail{
     grid-area: email;
+    font-size: 23px;
+}
+#profile #mail a:hover{
+  color: #fff;
 }
 
 /* Form  */
 #form{
     display: none;
+    border-radius: 10%;
     /* display: grid; */
     grid: 
     'wc wc wc'
@@ -233,18 +244,29 @@ nav img {
     ' img email temp'
     ' img about temp'
     'project project project';
-    margin: 0 100px 0 100px;
-    grid-gap: 20px 50px;
-    top: 0;
+    /* margin: 0 100px 0 100px; */
+    /* grid-gap: 20px 50px; */
+    /* top: 0; */
     align-items: center;
     color: white;
     margin-bottom: 30px;
+    background-color: rgb(129, 223, 211);
+    margin: 30px 100px 0 100px;
+    grid-gap: 20px 50px;
+    top: 0;
+    padding: 0 0 50px 10px;
+    align-items: center;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+    /* color: white; */
+    /* margin-bottom: 30px; */
+    border-radius: 20px;
+    background-color: rgb(129, 223, 211);
 }
 #form #fprofile{
     /* grid-area: img; */
     height: 200px;
     grid-area: img;
-    border-radius: 50%;
+    border-radius: 10px;
 }
 #form #wc{
     grid-area: wc;
@@ -427,3 +449,36 @@ nav img {
 .pd-2 { padding: 20px;}
 .pd-3 { padding: 1.6rem;}
 .pdh-1 {padding-left: 10px; padding-right: 1px;}
+
+.d-n {
+  display: block;
+  opacity: 1;
+}
+.github {
+  grid-area: github;
+}
+.linkedIn {
+  grid-area: linkedin;
+}
+.align-c{
+  display: flex;
+  flex-direction: row ;
+  align-self: center;
+  align-items: center;
+}
+.align-c1{
+  flex-direction: row;
+  flex-direction: column;
+}
+.c-1{
+  color: white;
+}
+.c-1:hover{
+  color: black;
+}
+.c-2{
+  color: black;
+}
+.c-2:hover{
+  color: white;
+}
