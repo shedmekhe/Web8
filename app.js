@@ -1,18 +1,22 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+const dotenv=require('dotenv').config();
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const hbs=require("hbs");
 var lrouter=require('./routes/list');
 var formRouter=require('./routes/formRouter');
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+// var usersRouter = require('./routes/users');
+var dboardRouter=require('./routes/dboard');
 const mongoose =require('mongoose');
 const url = "mongodb://0.0.0.0:27017/DevPlace";
 var FileStore=require('session-file-store');
 var app = express();
-
+var homeRoute=require('./routes/home')
+var userRoute=require('./routes/user')
+const welcomeRoute=require('./routes/welcome')
 const connect=mongoose.connect(url)
 .then((db)=>{
   console.log("Connected correctly to the Server ");  
@@ -35,8 +39,11 @@ app.set("views",template_path);
 
 app.use('/', indexRouter);
 app.use('/form',formRouter);
-app.use('/users', usersRouter);
+// app.use('/users', usersRouter);
 app.use('/all',lrouter);
+app.use('/dash',dboardRouter);
+app.use('/user',userRoute);
+app.use('/welcome',welcomeRoute)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
