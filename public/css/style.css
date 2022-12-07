@@ -213,10 +213,21 @@ nav ul li a span{
   display:flex;
   justify-content: center;
   align-items:center;
-  background-color: gray;
+  background-color: rgb(66, 195, 66);
   border-radius: 0.625rem;
-  color:#fff;
   transition:0.5s;
+  font-family: 'Montserrat', 'sans-serif';
+  font-size: 120%;
+  text-decoration: none;
+  color: black;
+  border: black solid 2px;
+  font-weight: bold;
+}
+.expbutton:hover{
+  text-decoration: none;
+  transform: scale(1.05);
+  transition: 0.5s ease-in-out;
+  color: black;
 }
 /*----------------------------------- Projects search section --------------------------*/
 .projects-div .project-content{

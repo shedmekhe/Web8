@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const hbs=require("hbs");
-var pList=require('./routes/list');
+var lrouter=require('./routes/list');
 var formRouter=require('./routes/formRouter');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -36,7 +36,7 @@ app.set("views",template_path);
 app.use('/', indexRouter);
 app.use('/form',formRouter);
 app.use('/users', usersRouter);
-app.use('/all',pList);
+app.use('/all',lrouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

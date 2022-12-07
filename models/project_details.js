@@ -16,6 +16,7 @@ const detailSchema=new Schema({
     },
     myfile1:{
         type:String,
+        // default:"https://drive.google.com/file/d/1WWQrD7PDI3YC_7NwOzWGsjGjrLGl6Sy5/view?usp=share_link"
         // required:true
     },
     yname:{
@@ -39,10 +40,7 @@ const detailSchema=new Schema({
     },
     // {{type:String}}
     technologies:[],
-    apk_views:{
-        type:String,
-        default:null
-    },
+    apk_views:[],
     vid1:{
         type:String,
         default:null

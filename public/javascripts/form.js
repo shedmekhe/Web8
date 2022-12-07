@@ -53,7 +53,7 @@ function myFunction() {
 nextBtn.addEventListener("click", () => {
 
     if (step === 1) {
-        if (document.getElementById('title').value && document.getElementById('obj').value) {
+        if (document.getElementById('title').value && document.getElementById('obj').value && document.getElementById('myfile1').value) {
             step++;
             progressBar.style.width = "40%"
             setTimeout(() => {
