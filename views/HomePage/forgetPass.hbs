@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/auth-style.css">
     <link rel="stylesheet" href="../../public/css/auth-style.css">
+    <script src="https://kit.fontawesome.com/49ae0caa8c.js" crossorigin="anonymous"></script>
 </head>
 
 
@@ -15,26 +16,26 @@
     <nav>
     <h1><a href="/">DevSpace</a></h1>
     <ul>
-      {{#if user}}
-        <li>Welcome, {{user.email}}</li>
-        <li><a href="/logout">Log out</a></li>
-      {{else}}
         <li><a href="/user/login" class="btn">Log in</a></li>
         <li><a href="/user/register" >Sign up</a></li>
-      {{/if}}
     </ul>
     </nav>
     <div class="container">
-      
+        
         <h4 class="alert">{{msg}}</h4>
         <form method="POST">
-        <h2>Login</h2>
-        <label for="email">Email</label>
-        <input type="text" name="email">
-        <label for="password">Password</label>
-        <input type="password" name="password"><br>
-        <input type="submit" class="submit"><br>
-        <a href="./forgetPass.html">Forget Password ? </a>
+            <a href="./login.hbs" >
+                <i class="fa-solid fa-arrow-left "></i> <br><br>
+            </a>
+            <h3 class="bold">Forget Password</h3>
+        {{#if user}}
+            <h5>No problem! Just enter the email address that you signed up with to reset it.</h5> 
+        {{else}}
+            <h5>Enter the OTP sent to {{this.email}} </h5>
+        {{/if}}
+            <input type="text" name="email">
+            <input type="submit" class="submit"> <br>
+
         {{!-- <h4>Dont have an account ? Register here </h4>
          <a href="/user/register">Register</a> --}}
         </form> 
